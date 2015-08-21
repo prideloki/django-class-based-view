@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+
+
+# OSX Finder turds
+.DS_Store
+
+*.pyc
+
+.swp
