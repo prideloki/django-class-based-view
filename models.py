@@ -1,16 +1,19 @@
 from django.db import models
 import datetime
 
+
 class Employee(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     email = models.EmailField()
+
     class Meta:
         verbose_name = "employee"
         verbose_name_plural = "employees"
 
     def __str__(self):
         return self.name
+
 
 class Publisher(models.Model):
     name = models.CharField(max_length=30)
@@ -22,8 +25,10 @@ class Publisher(models.Model):
 
     class Meta:
         ordering = ["-name"]
+
     def __str__(self):              # __unicode__ on Python 2
         return self.name
+
 
 class Author(models.Model):
     salutation = models.CharField(max_length=10)
@@ -31,8 +36,10 @@ class Author(models.Model):
     email = models.EmailField()
     headshot = models.ImageField(upload_to='author_headshots')
     last_accessed = models.DateTimeField()
+
     def __str__(self):              # __unicode__ on Python 2
         return self.name
+
 
 class Book(models.Model):
     title = models.CharField(max_length=100)

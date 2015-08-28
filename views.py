@@ -22,11 +22,6 @@ class MyView2(MyView):
     # pass
     age = 37
 
-class LoginRequiredMixin(object):
-    @classmethod
-    def as_view(cls, **initkwargs):
-        view = super(LoginRequiredMixin, cls).as_view(**initkwargs)
-        return login_required(view)
 
 class EmployeeRegister(View):
     def write_form(self,request,form):
