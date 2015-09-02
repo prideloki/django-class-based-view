@@ -6,5 +6,5 @@ __pycache__/
 .DS_Store
 
 *.pyc
-
+node_modules/
 .swp

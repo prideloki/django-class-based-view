@@ -1,6 +1,7 @@
 {% extends 'myapp/base.html' %}
 {% block content %}
-<h1>Book Name: {{ book.title }}</h1>
+
+<h1 class="make_color">Book Name: {{ book.title }}</h1>
 <h2>Author lists</h2>
 <ul>
 {% for author in author_list %}
