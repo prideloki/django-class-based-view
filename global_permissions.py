@@ -18,8 +18,9 @@ class GlobalPermission(Permission):
 
     class Meta:
         proxy = True
+        verbose_name='global_permission'
 
     def save(self, *args, **kwargs):
-        ct, created = ContentType.objects.get_or_create(app_label='global')
+        ct, created = ContentType.objects.get_or_create(model=self._meta.verbose_name,app_label=self._meta.app_label)
         self.content_type = ct
         super(GlobalPermission, self).save(*args, **kwargs)

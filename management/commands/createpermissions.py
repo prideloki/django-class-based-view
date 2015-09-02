@@ -11,6 +11,8 @@ class Command(BaseCommand):
           GlobalPermission.objects.create(codename='can_do_it', name='Can do it')
         if not GlobalPermission.objects.filter(codename='can_did_it').exists(): 
           GlobalPermission.objects.create(codename='can_did_it', name='Can did it')
+        if not GlobalPermission.objects.filter(codename='can_use_it').exists(): 
+          GlobalPermission.objects.create(codename='can_use_it', name='Can did it')
           # if not Permission.objects.filter(codename="create_manager").exists():
           #     Permission.objects.create(codename='create_manager',
           #                               name='Create Campaign Manager',
